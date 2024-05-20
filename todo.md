@@ -1,7 +1,11 @@
 # TODO
 
 # OOP
-[ ] Inheritance 
-[ ] Polymorphism
-[ ] Encapsulation
-[ ] Abstraction
+### Inheritance
+[ ] Getters\
+[ ] Setters\
+
+### Polymorphism
+### Encapsulation
+### Abstraction
+

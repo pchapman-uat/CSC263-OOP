@@ -5,6 +5,7 @@ public class Main{
 }
 class Animal {
     // Class variables
+    // TODO: Add Setters and Getters
     public int age;
     public String species;
 
