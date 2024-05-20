@@ -1,6 +1,8 @@
 public class Main{
     public static void main(String[] args) {
         System.out.println("Hello World");
+        Cephalopod cephalopod = new Cephalopod("Cuttlefish", 40);
+        cephalopod.printInfo();
     }
 }
 
