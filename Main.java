@@ -1,14 +1,10 @@
 public class Main{
     public static void main(String[] args) {
         System.out.println("Hello World");
-        Animal animal = new Animal("Cat", 10);
-        animal.printInfo();
-        animal.setAge(11);
-        animal.printInfo();
     }
 }
 
-class Animal {
+abstract class Animal {
     // Class variables
     private int age;
     public String species;
