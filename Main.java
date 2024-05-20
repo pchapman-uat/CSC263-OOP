@@ -6,7 +6,7 @@ public class Main{
 class Animal {
     // Class variables
     // TODO: Add Setters and Getters
-    public int age;
+    private int age;
     public String species;
 
     // Constructor
@@ -19,5 +19,15 @@ class Animal {
     public void printInfo(){
         System.out.println("My Species is: "+this.species);
         System.out.println("My Age is: "+this.age);
+    }
+
+    // === GETTERS/SETTERS===
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 }
