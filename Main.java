@@ -6,6 +6,7 @@ public class Main{
     }
 }
 
+// NOTE: Assignment - Abstraction
 // An Abstract Class is used as this is a base for animals, it itself will not be used
 abstract class Animal {
     // Class variables
@@ -24,6 +25,7 @@ abstract class Animal {
         System.out.println("My Age is: "+this.getAge());
     }
 
+    // NOTE: Assignment - Encapsulation
     // === GETTERS/SETTERS===
 
     public int getAge() {
@@ -43,9 +45,12 @@ abstract class Animal {
     }
     
 }
+// TODO: Add Arms Attribute
+// NOTE: Assignment - Inheritance
 class Cephalopod extends Animal{
     // Class variables
     private String subSpecies;
+    // NOTE: Assignment - Polymorphism
     // Constructor
     public Cephalopod(String species, String subSpecies, int age){
         // Call the constructor of the base class
@@ -73,6 +78,7 @@ class Cephalopod extends Animal{
         }
     }
 
+    // NOTE: Assignment - Encapsulation
     // ===GETTERS/SETTERS===
     public String getSubSpecies() {
         return subSpecies;
