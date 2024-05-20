@@ -2,9 +2,11 @@
 
 # OOP
 ### Inheritance
+[X] 1 Child Class
 ### Polymorphism
 ### Encapsulation
-[ ] Getters\
-[ ] Setters
+[X] Getters\
+[X] Setters
 ### Abstraction
+[X] Abstract Class
 
