@@ -1,1 +1,1 @@
-# CSC263-OOP
+# CSC263 Object-Oriented Programming
