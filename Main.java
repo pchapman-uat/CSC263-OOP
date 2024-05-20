@@ -4,6 +4,7 @@ public class Main{
     }
 }
 
+// An Abstract Class is used as this is a base for animals, it itself will not be used
 abstract class Animal {
     // Class variables
     private int age;
@@ -40,3 +41,34 @@ abstract class Animal {
     }
     
 }
+class Cephlapod extends Animal{
+    // Class variables
+    public String subSpecies;
+    // Constructor
+    public Cephlapod(String species, String subSpecies, int age){
+        // Call the constructor of the base class
+        super(species, age);
+        // Set the additonal class variables
+        this.subSpecies = subSpecies;
+    }
+    // Secondary constructor for without sub species
+    public Cephlapod(String species, int age){
+        super(species, age);
+    }
+    // Swim method
+    public void swim(float distance){
+        System.out.println("I am swiming for "+distance+" meters");
+    }
+    // This overrides the printInfo method from the base class
+    @Override
+    public void printInfo(){
+        // If there is a sub species, print it, otherwise print the base class info
+        if(subSpecies != null){
+            System.out.println("My Species is: "+this.subSpecies+" "+this.getSpecies());
+            System.out.println("My Age is: "+this.getAge());
+        } else {
+            super.printInfo();
+        }
+    }
+}
+
