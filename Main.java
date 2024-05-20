@@ -46,7 +46,7 @@ abstract class Animal {
 class Cephalopod extends Animal{
     // Class variables
     // TODO: Add getter and setter
-    public String subSpecies;
+    private String subSpecies;
     // Constructor
     public Cephalopod(String species, String subSpecies, int age){
         // Call the constructor of the base class
@@ -67,11 +67,19 @@ class Cephalopod extends Animal{
     public void printInfo(){
         // If there is a sub species, print it, otherwise print the base class info
         if(subSpecies != null){
-            System.out.println("My Species is: "+this.subSpecies+" "+this.getSpecies());
+            System.out.println("My Species is: "+this.getSubSpecies()+" "+this.getSpecies());
             System.out.println("My Age is: "+this.getAge());
         } else {
             super.printInfo();
         }
+    }
+
+    // ===GETTERS/SETTERS===
+    public String getSubSpecies() {
+        return subSpecies;
+    }
+    public void setSubSpecies(String subSpecies) {
+        this.subSpecies = subSpecies;
     }
 }
 
