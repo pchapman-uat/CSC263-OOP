@@ -21,8 +21,8 @@ class Animal {
 
     // Print information about the animal 
     public void printInfo(){
-        System.out.println("My Species is: "+this.species);
-        System.out.println("My Age is: "+this.age);
+        System.out.println("My Species is: "+this.getSpecies());
+        System.out.println("My Age is: "+this.getAge());
     }
 
     // === GETTERS/SETTERS===
