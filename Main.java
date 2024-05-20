@@ -45,7 +45,6 @@ abstract class Animal {
 }
 class Cephalopod extends Animal{
     // Class variables
-    // TODO: Add getter and setter
     private String subSpecies;
     // Constructor
     public Cephalopod(String species, String subSpecies, int age){
