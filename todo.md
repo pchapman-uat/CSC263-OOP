@@ -2,10 +2,9 @@
 
 # OOP
 ### Inheritance
-[X] Getters\
-[X] Setters
-
 ### Polymorphism
 ### Encapsulation
+[X] Getters\
+[X] Setters
 ### Abstraction
 
