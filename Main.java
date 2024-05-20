@@ -41,18 +41,18 @@ abstract class Animal {
     }
     
 }
-class Cephlapod extends Animal{
+class Cephalopod extends Animal{
     // Class variables
     public String subSpecies;
     // Constructor
-    public Cephlapod(String species, String subSpecies, int age){
+    public Cephalopod(String species, String subSpecies, int age){
         // Call the constructor of the base class
         super(species, age);
         // Set the additonal class variables
         this.subSpecies = subSpecies;
     }
     // Secondary constructor for without sub species
-    public Cephlapod(String species, int age){
+    public Cephalopod(String species, int age){
         super(species, age);
     }
     // Swim method
