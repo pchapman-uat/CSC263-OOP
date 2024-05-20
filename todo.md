@@ -4,7 +4,7 @@
 ### Inheritance
 ### Polymorphism
 ### Encapsulation
-[X] Getters\
-[X] Setters
+[ ] Getters\
+[ ] Setters
 ### Abstraction
 
