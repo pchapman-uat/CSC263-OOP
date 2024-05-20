@@ -30,4 +30,13 @@ class Animal {
     public void setAge(int age) {
         this.age = age;
     }
+
+    public String getSpecies() {
+        return species;
+    }
+
+    public void setSpecies(String species) {
+        this.species = species;
+    }
+    
 }
