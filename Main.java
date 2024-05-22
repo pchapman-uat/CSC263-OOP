@@ -126,7 +126,9 @@ class Cephalopod extends Animal{
     public void setTentencle(int limb){
         this.tentacles = limb;
     }
+    // ===REMOVING LIMBS===
 
+    // NOTE: Assignment - Polymorphism
     public void removeArm(){
        this.removeLimb(1, 1);
     }
@@ -139,9 +141,11 @@ class Cephalopod extends Animal{
     public void removeTentacle(int limbs){
         this.removeLimb(limbs, 0);
     }
+
     private void removeLimb(int change, int type){
         int limbs;
         String limb;
+        // Check for limb type, if not valid end by returning
         if(type == 0){
             limbs = this.tentacles;
             limb = "tentacle";
@@ -149,40 +153,54 @@ class Cephalopod extends Animal{
             limbs = this.arms;
             limb = "arm";
         } else return;
+        // If there are more than 0 limbs
         if(limbs>0) {
+            // Update the limbs
             limbs -= change;
-            if(this.arms < 0) this.arms = 0;
+            // Prevent negative number
+            if(limbs < 0) limbs = 0;
+            // Display the lost limb message
             System.out.println("I lost "+change+" "+limb+"(s)!");
+            // Update the variable
             if(type == 0) this.tentacles = limbs;
             else if (type == 1) this.arms = limbs;
+            // Display remaining Limbs
             System.out.println("I have "+limbs+" "+limb+"(s) left!");
         } else {
+            // Display if there is no limbs to remove
             System.out.println("I have no "+limb+"s to lose!");
         }
     }
 }
 
 class Octopus extends Cephalopod{
+    // Maximum Limbs
     private int maxLimbs = 8;
+    // NTOE: Assignment - Polymorphism
     public Octopus(String subSpecies, int age){
         super("Octopus", subSpecies, age, 0, 8);
     }
     public Octopus(int age){
         super("Octopus", age, 0, 8);   
     }
-    
+    // NOTE: Assignment - Polymorphism
     public void regrowTentacle(){
         regrowLimb(1);
     }
     public void regrowTentacle(int limbs){
         regrowLimb(limbs);
     }
+    
     private void regrowLimb(int limbs){
+        // If they have the max or more limbs
         if(this.getTentencle() >= this.maxLimbs) System.out.println("Unable to grow more limbs");
         else{
-            if(this.getTentencle()+limbs>limbs)  this.setTentencle(maxLimbs);
+            // If adding excedes max, set to max
+            if(this.getTentencle()+limbs>maxLimbs)  this.setTentencle(maxLimbs);
+            // Else add to limbs
             else this.setTentencle(this.getTentencle()+limbs);
 
+            // Display regrown message
             System.out.println("I have regrown "+limbs+" tentecle(s)! I now have "+this.getTentencle()+" in Total!");
            
         }
