@@ -12,6 +12,11 @@ public class Main{
         octopus.regrowTentacle();
         octopus.regrowTentacle();
         octopus.removeTentacle(5);
+
+        Squid squid = new Squid("Giant", 5);
+        squid.printInfo();
+        squid.removeTentacle();
+        squid.removeArm(3);
     }
 }
 
@@ -54,7 +59,7 @@ abstract class Animal {
     }
     
 }
-// TODO: Add Arms Attribute
+
 // NOTE: Assignment - Inheritance
 class Cephalopod extends Animal{
     // Class variables
@@ -181,5 +186,14 @@ class Octopus extends Cephalopod{
             System.out.println("I have regrown "+limbs+" tentecle(s)! I now have "+this.getTentencle()+" in Total!");
            
         }
+    }
+}
+
+class Squid extends Cephalopod{
+    public Squid(String subSpecies, int age){
+        super("Squid", subSpecies, age, 8, 2);
+    }
+    public Squid(int age){
+        super("Squid", age, 8, 2);
     }
 }
