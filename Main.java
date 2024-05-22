@@ -5,6 +5,13 @@ public class Main{
         cephalopod.printInfo();
         cephalopod.removeArm();
         cephalopod.removeArm(2);
+
+        Octopus octopus = new Octopus("Dumbo", 3);
+        octopus.printInfo();
+        octopus.removeTentacle();
+        octopus.regrowTentacle();
+        octopus.regrowTentacle();
+        octopus.removeTentacle(5);
     }
 }
 
@@ -99,6 +106,22 @@ class Cephalopod extends Animal{
     public void setSubSpecies(String subSpecies) {
         this.subSpecies = subSpecies;
     }
+    
+    public int getTentencle(){
+        return this.tentacles;
+    }
+
+    public int getArms(){
+        return this.arms;
+    }
+
+    public void setArm(int arms){
+        this.arms = arms;
+    }
+    public void setTentencle(int limb){
+        this.tentacles = limb;
+    }
+
     public void removeArm(){
        this.removeLimb(1, 1);
     }
@@ -127,10 +150,36 @@ class Cephalopod extends Animal{
             System.out.println("I lost "+change+" "+limb+"(s)!");
             if(type == 0) this.tentacles = limbs;
             else if (type == 1) this.arms = limbs;
-            System.out.println("I have "+this.arms+" "+limb+"(s) left!");
+            System.out.println("I have "+limbs+" "+limb+"(s) left!");
         } else {
             System.out.println("I have no "+limb+"s to lose!");
         }
     }
 }
 
+class Octopus extends Cephalopod{
+    private int maxLimbs = 8;
+    public Octopus(String subSpecies, int age){
+        super("Octopus", subSpecies, age, 0, 8);
+    }
+    public Octopus(int age){
+        super("Octopus", age, 0, 8);   
+    }
+    
+    public void regrowTentacle(){
+        regrowLimb(1);
+    }
+    public void regrowTentacle(int limbs){
+        regrowLimb(limbs);
+    }
+    private void regrowLimb(int limbs){
+        if(this.getTentencle() >= this.maxLimbs) System.out.println("Unable to grow more limbs");
+        else{
+            if(this.getTentencle()+limbs>limbs)  this.setTentencle(maxLimbs);
+            else this.setTentencle(this.getTentencle()+limbs);
+
+            System.out.println("I have regrown "+limbs+" tentecle(s)! I now have "+this.getTentencle()+" in Total!");
+           
+        }
+    }
+}
