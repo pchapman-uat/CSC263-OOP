@@ -175,7 +175,7 @@ class Cephalopod extends Animal{
 class Octopus extends Cephalopod{
     // Maximum Limbs
     private int maxLimbs = 8;
-    // NTOE: Assignment - Polymorphism
+    // NOTE: Assignment - Polymorphism
     public Octopus(String subSpecies, int age){
         super("Octopus", subSpecies, age, 0, 8);
     }
