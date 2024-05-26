@@ -10,5 +10,5 @@
 [X] Setters
 ### Abstraction
 [X] Abstract Class
-[ ] Abstract Method
+[X] Abstract Method
 
